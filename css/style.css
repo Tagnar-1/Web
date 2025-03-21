@@ -1,0 +1,36 @@
+h1 {
+  text-align: center;
+  font-size: 5em;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 1.5;
+  margin-left: 100px;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1.5;
+  margin-left: 150px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.5em;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: Comic Sans MS;
+  text-align: justify;
+  background: rgba(255,255,255,0.7);
+}
+
+body {
+  background-image: url('../img/fish.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
