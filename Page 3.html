@@ -23,5 +23,24 @@
   <br>Aye, each website we visited was more treacherous than the last, filled with traps and tricks that would make even the saltiest sea dog hesitate. But we had no fear, no retreat in our hearts. For the treasure—an unthinkable prize—was out there, waiting to be claimed by those daring enough to hunt across the Seven Websites!
   <br>
   <br>So hoist the Jolly Roger high, me hearties, for the hunt has begun. The digital ocean be vast, but no storm, no pirate, no clever website shall stop us from claiming what’s rightfully ours. Onward we sail, through the vast unknown, and may the winds guide us to victory! Arrr!</br><p>
+
+  <h2>???</h2>
+    <input type="text" id="userAnswer" placeholder="Type Answer Here" style="margin-left: 120px; font-size: 40px">
+    <button onclick="checkAnswer()" style="margin-left: 10px; font-size: 40px">Submit</button>
+    <p id="errorMessage" style="display: none">WRONG, Go to page 5 to get knowledge</p>
+
+  <script>
+    function checkAnswer() {
+      const correctAnswer = "god can strike me down if i'm lying";
+
+      const userAnswer = document.getElementById("userAnswer").value.trim().toLowerCase();
+
+      if (userAnswer === correctAnswer) {
+        window.location.href="page 6.html"
+      } else {
+        document.getElementById("errorMessage").style.display = "block"
+      }
+    }
+  </script>
 </body>
 </html>

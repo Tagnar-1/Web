@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monkey&#x1F648;</title>
+</head>
+<body>
+<iframe width="1889" height="800"
+  src="https://www.youtube.com/embed/4-UbHw8eDzM?autoplay=1"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+  </iframe>
+    <h2>Multiple Choice Quiz about monkeys</h2>
+
+    <form id="quizForm">
+        <p>1. What is the capital of France?</p>
+        <label><input type="radio" name="q1" value="Paris"> Paris</label><br>
+        <label><input type="radio" name="q1" value="London"> London</label><br>
+        <label><input type="radio" name="q1" value="Berlin"> Berlin</label><br>
+
+        <p>2. When do the monkeys defeat demon king?</p>
+        <label><input type="radio" name="q2" value="1:21:04"> 1:21:04</label><br>
+        <label><input type="radio" name="q2" value="7:03:25"> 7:03:25</label><br>
+        <label><input type="radio" name="q2" value="9:51:45"> 9:51:45</label><br>
+
+        <p>3. When is the protagonist captured?</p>
+        <label><input type="radio" name="q3" value="48:01"> 48:01</label><br>
+        <label><input type="radio" name="q3" value="1:56"> 1:56</label><br>
+        <label><input type="radio" name="q3" value="2:34"> 2:34</label><br>
+
+        <p>4. Who is monkey?</p>
+        <label><input type="radio" name="q4" value="you"> you</label><br>
+        <label><input type="radio" name="q4" value="me"> me</label><br>
+        <label><input type="radio" name="q4" value="yes"> yes</label><br>
+
+        <p>5. With how many languages dose the horde of real demons humiliate the protagonist?</p>
+        <label><input type="radio" name="q5" value="200"> 200</label><br>
+        <label><input type="radio" name="q5" value="300"> 300</label><br>
+        <label><input type="radio" name="q5" value="100"> 100</label><br>
+
+        <p>6. Who saves the protagonist?</p>
+        <label><input type="radio" name="q6" value="soldiers"> soldiers</label><br>
+        <label><input type="radio" name="q6" value="his mum"> his mum</label><br>
+        <label><input type="radio" name="q6" value="gorilla"> gorilla</label><br>
+
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswers() {
+            let correctAnswers = { q1: "Paris", q2: "9:51:45", q3: "48:01", q4: "yes", q5: "300", q6: "soldiers" };
+            let score = 0;
+            let form = document.getElementById("quizForm");
+
+            for (let question in correctAnswers) {
+                let selected = form.elements[question].value;
+                if (selected === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            if (score === Object.keys(correctAnswers).length) {
+                window.location.href = "https://www.youtube.com/watch?v=XfqOB4hvxlY";
+            } else {
+                document.getElementById("result").innerText = "Wrong answers! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>

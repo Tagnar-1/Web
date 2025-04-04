@@ -119,3 +119,11 @@ p{
   margin-bottom: 100px;
   margin-top: 50px;
 }
+
+.page5 {
+  background-image: url('../img/map 4k.png');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: rgb(176, 152, 72);
+  background-size: cover;
+}
