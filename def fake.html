@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Answer?</title>
+  <link rel="icon" href="img/img.png" sizes="any">
+  <link rel="icon" href="img/img.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/img.png">
+</head>
+<body class="hacker">
+  <h2>Enter the ciphered text:</h2>
+    <input type="text" id="cipherText" style="margin-left: 150px; font-size: 40px">
+    <button onclick="decryptText()" style="margin-left: 20px; font-size: 40px">Decrypt</button>
+    <h2>Decrypted text:</h2>
+    <p id="result"></p>
+  <script>
+    function decryptText() {
+       let text = document.getElementById("cipherText").value;
+            let shift = 3;
+
+            let decryptedText = "";
+
+            for (let i = 0; i < text.length; i++) {
+                let char = text[i];
+
+                if (/[a-z]/.test(char)) {
+                    let code = text.charCodeAt(i);
+
+                    decryptedText += String.fromCharCode(((code - 97 - shift + 26) % 26) + 97);
+                } else {
+                    decryptedText += char;
+                }
+            }
+            document.getElementById("result").textContent = decryptedText;
+        }
+  </script>
+</body>
+</html>

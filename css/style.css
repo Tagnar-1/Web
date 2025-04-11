@@ -127,3 +127,18 @@ p{
   background-color: rgb(176, 152, 72);
   background-size: cover;
 }
+
+.hacker {
+  #hiddenContent {
+            display: none;  /* Hidden by default */
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+  background-image: url('../img/hack real.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-color: rgb(176, 152, 72);
+  background-size: cover;
+}
