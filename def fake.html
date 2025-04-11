@@ -10,15 +10,17 @@
 </head>
 <body class="hacker">
   <h2>Enter the ciphered text:</h2>
+  <form id="cipherForm">
     <input type="text" id="cipherText" style="margin-left: 150px; font-size: 40px">
-    <button onclick="decryptText()" style="margin-left: 20px; font-size: 40px">Decrypt</button>
+    <button type="submit" style="margin-left: 20px; font-size: 40px">Decrypt</button>
+  </form>
     <h2>Decrypted text:</h2>
     <p id="result"></p>
   <script>
-    function decryptText() {
-       let text = document.getElementById("cipherText").value;
+       document.getElementById("cipherForm").addEventListener("submit", function(e) {
+            e.preventDefault()
+            let text = document.getElementById("cipherText").value;
             let shift = 3;
-
             let decryptedText = "";
 
             for (let i = 0; i < text.length; i++) {
@@ -33,7 +35,7 @@
                 }
             }
             document.getElementById("result").textContent = decryptedText;
-        }
+        });
   </script>
 </body>
 </html>
